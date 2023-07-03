@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UNIVERSE</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Freckle+Face&family=Open+Sans:wght@300;400&family=Poppins:wght@300;400;500;600&family=Roboto:wght@300&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&family=Varela+Round&display=swap');
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body{
+    background: linear-gradient( black, rgb(0, 0, 32), rgb(44, 1, 51));
+    font-family: 'Open Sans', sans-serif;
+    color: white;
+    height: 100vh;
+}
+.top{
+    height: 100vh;
+    width: 100%;
+    background: linear-gradient( black, rgb(0, 0, 32), rgb(44, 1, 51));
+}
+
+nav{
+    top: 0;
+    position: fixed;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    width: 100%;
+    height: 70px;
+    align-items: center;
+}
+.head{
+    width: 100%;
+    float: none;
+    padding-left: 40px;
+    font-size: 22px;
+    font-weight: bolder;
+    letter-spacing: 2px;
+}
+.login{
+    float: right;
+}
+.login ul{
+    display: flex;
+    list-style: none;
+    justify-content: space-around;
+    box-sizing: border-box;
+}
+.login ul li{
+    margin-right: 30px;
+    align-items: center;
+    padding: 6px 30px;
+    display: flex;
+    justify-content: center;
+}
+.login ul li{
+    text-decoration: none;
+    color: white;
+    display: inline-block;
+    transition: .4s ease-in-out;
+    font-size: 15px;
+    border: 2px solid rgb(144,0,255);
+    border-radius: 25px;
+}
+.login ul li:hover{
+    background-color: rgb(23, 23, 23);
+    border: 2px solid rgb(135, 1, 237);
+}
+.login ul a{
+    text-decoration: none;
+    color: white;
+    display: inline-block;
+    transition: .4s ease-in-out;
+    font-size: 15px;
+}
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+.container ul{
+    text-align: center;
+    list-style: none;
+}
+.container ul li{
+    font-size: 20px;
+    margin: 20px;
+    border: 2px solid rgb(144,0,255);
+    padding: 20px 80px;
+    border-radius: 50px;
+}
+.container ul li a{
+    color: white;
+    text-decoration: none;
+}
+.container ul li:hover{
+    background-color: black;
+}
+.info{
+    position: absolute;
+    left: 1000px;
+    padding: 20px;
+}
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="head">UNIVERSE</div>
+        <div class="login">
+            <ul>
+                <li><a href="login.html" id="login">LOGIN</a></li>
+                <li><a href="signup.html" class="signup">SIGNUP</a></li>
+            </ul>
+        </div>
+    </nav>
+    <div class="container">
+        <ul>
+            <li>
+                <a href="index.html" onmouseover="home()" onmouseleave="mouse()">Home</a>
+            </li>
+            <li><a href="earth.html" onmouseleave="mouse()"  onmouseover="earth()">Earth</a></li>
+            <li><a href="earthtemprature.html" onmouseleave="mouse()"  onmouseover="earthtemprature()">Earth Temperature</a></li>
+            <li><a href="#" onmouseleave="mouse()"  onmouseover="mars()">Mars</a></li>
+            <li><a href="#" onmouseleave="mouse()"  onmouseover="marstemprature()">Mars Temperature</a></li>
+        </ul>
+        <div class="info"><span id="info"></span></div>
+    </div>
+</body>
+</html>
+<script>
+    function home(){
+        document.getElementById("info").innerHTML="It is a home page.<br>This website is all about the information of different planets."
+    }
+    function mouse(){
+        document.getElementById("info").innerHTML=""
+    }
+    function earth(){
+        document.getElementById("info").innerHTML="It contains the information about earth"
+    }
+    function earthtemprature(){
+        document.getElementById("info").innerHTML="Find out temperature of different areas of earth"
+    }
+    function mars(){
+        document.getElementById("info").innerHTML="It contains the information about mars"
+    }
+    function marstemprature(){
+        document.getElementById("info").innerHTML="Find out the temprature of mars"
+    }
+</script>
